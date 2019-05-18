@@ -129,8 +129,8 @@ void main(void){
     n=normalize(vec3(v4+v1-v3-v2,v3+v4-v1-v2,v2+v4-v3-v1));
     
     float b=dot(n,normalize(prp-p));
-    gl_FragColor=vec4((b*c+pow(b,8.0))*(1.0-f*.01),1.0);//simple phong LightPosition=CameraPosition
+    _GLF_color=vec4((b*c+pow(b,8.0))*(1.0-f*.01),1.0);//simple phong LightPosition=CameraPosition
   }
-  else gl_FragColor=vec4(0,0,0,1); //background color
-	//gl_FragColor *= 0.2;
+  else _GLF_color=vec4(0,0,0,1); //background color
+
 }
