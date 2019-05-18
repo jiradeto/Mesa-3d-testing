@@ -10,6 +10,10 @@ uniform float time;
 uniform vec2 mouse;
 uniform vec2 resolution;
 
+// shadertoy emulation
+#define iTime time
+#define iResolution resolution
+
 
 float dBox(vec3 p, vec3 b) {
 	vec3 d = abs(p) - b;
