@@ -1,5 +1,0 @@
-{
-  "git_hash": "856751fa869977b45e266c222010e3e144ec2b4c-dirty",
-  "args": "/Users/JIRADET/Desktop/Workspaces/GSCO2019/Mesa-3d-testing/shaders/samples/300es/sandbox_G_46377.json samples/donors /Users/JIRADET/Desktop/Workspaces/GSCO2019/Mesa-3d-testing/shaders/work/shaderfamilies/family_300es_sandbox_G_46377 --seed 1182054491 --max-uniforms 0 --max-bytes 500000 --num-variants 1",
-  "seed": 1182054491
-}
