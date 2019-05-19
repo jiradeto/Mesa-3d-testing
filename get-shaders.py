@@ -15,7 +15,7 @@ if not (os.path.exists('downloads/300es')):
 if not (os.path.exists('downloads/donors')):
     os.mkdir('downloads/donors')
 
-for page in range(1, 2):
+for page in range(1, 21):
     driver.get(site+ "?page="+ str(page))
     elem = driver.find_element_by_id("gallery")
     ids = elem.find_elements_by_tag_name('a')
