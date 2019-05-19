@@ -1,0 +1,32 @@
+#version 300 es 
+
+precision highp float; 
+
+layout(location = 0) out vec4 _GLF_color; 
+
+uniform vec2 injectionSwitch;
+
+
+
+
+uniform float time;
+uniform vec2 mouse;
+uniform vec2 resolution;
+
+void main( void ) {
+
+	vec4 color;
+	bool yCondition = false;
+	bool xCondition = false;
+	yCondition = (gl_FragCoord.y  > sin(gl_FragCoord.x) + (resolution.y / 2.0) - 1.5 ) &&  (gl_FragCoord.y  < sin(gl_FragCoord.x) + (resolution.y / 2.0) ) ;
+	float timeInt = time* 29.0;
+	xCondition = gl_FragCoord.x > timeInt - 15.0 && gl_FragCoord.x < timeInt + 15.0 ;
+	if( xCondition && yCondition) {
+		color = vec4(0.3 + sin(time), 0.0, 0.0 + cos(time), 1.0);
+	}
+	else {
+		color = vec4(0.0, .2, 0.2, 1.0);	
+	}
+	_GLF_color = color;
+
+}
