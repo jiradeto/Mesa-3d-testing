@@ -1,15 +1,14 @@
 #version 300 es 
 
+precision highp float; 
+
 layout(location = 0) out vec4 _GLF_color; 
 
-uniform vec2 injectionSwitch;
-/*
+uniform vec2 injectionSwitch;/*
  * Original shader from: https://www.shadertoy.com/view/MltcDB
  */
 
-#ifdef GL_ES
-precision mediump float;
-#endif
+
 
 // glslsandbox uniforms
 uniform float time;
@@ -377,5 +376,5 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 
 void main(void)
 {
-    mainImage(gl_FragColor, gl_FragCoord.xy);
+    mainImage(_GLF_color, gl_FragCoord.xy);
 }

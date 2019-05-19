@@ -1,9 +1,10 @@
 #version 300 es 
 
+precision highp float; 
+
 layout(location = 0) out vec4 _GLF_color; 
 
-uniform vec2 injectionSwitch;
-// dogshit edits 4 u
+uniform vec2 injectionSwitch;// dogshit edits 4 u
 precision highp float;
 uniform   float time;
 uniform   vec2  resolution;
@@ -70,6 +71,6 @@ void main( void )
 	
 	
 	
-	gl_FragColor = vec4( c2, 1.0 );
+	_GLF_color = vec4( c2, 1.0 );
 
 }

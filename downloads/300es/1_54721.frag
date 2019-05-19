@@ -1,9 +1,10 @@
 #version 300 es 
 
+precision highp float; 
+
 layout(location = 0) out vec4 _GLF_color; 
 
-uniform vec2 injectionSwitch;
-precision mediump float;
+uniform vec2 injectionSwitch;precision mediump float;
 uniform float time;
 uniform vec2 resolution;
 
@@ -15,5 +16,5 @@ void main()
     vec4 s = .1*cos(2.5*vec4(9,1,80,-2) + time + o.y + sin(o.y) * sin(time)*15.);
     vec4 e = s.yzwx;
     vec4 f = min(o.x-s,e-o.x);
-    gl_FragColor = dot(clamp(f*r.y,0.,1.),80.*(s-e)) * (s-0.1) - f;
+    _GLF_color = dot(clamp(f*r.y,0.,1.),80.*(s-e)) * (s-0.1) - f;
 }

@@ -1,13 +1,13 @@
 #version 300 es 
 
+precision highp float; 
+
 layout(location = 0) out vec4 _GLF_color; 
 
 uniform vec2 injectionSwitch;
-#ifdef GL_ES
-precision highp float;
-#endif
 
-//#extension GL_OES_standard_derivatives : enable
+//
+
 
 uniform float time;
 uniform vec2 mouse;
@@ -75,5 +75,5 @@ void main( void ){
 		//fract(uv)
 		color[2]= .01 / length( abs(fract(uv)-.5) );
 	
-	gl_FragColor=vec4(color/.1,time);
+	_GLF_color=vec4(color/.1,time);
 }

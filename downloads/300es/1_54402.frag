@@ -1,14 +1,14 @@
 #version 300 es 
 
+precision highp float; 
+
 layout(location = 0) out vec4 _GLF_color; 
 
 uniform vec2 injectionSwitch;
 
-#ifdef GL_ES
-precision mediump float;
-#endif
  
-#extension GL_OES_standard_derivatives : enable
+
+
  
 // Light Study by @vv4pi
  
@@ -93,5 +93,5 @@ void main( void ) {
 	vec3 l2 = vec3(0.5, 0.4, 0.8) * light(l2at, mp) * max(0.0, dot(norm(mp), normalize(l2at - mp)));
 
 	vec3 l = vec3(0.7, 0.8, 0.6) * 0.1 + (l1 + l2) / 2.0;
-	gl_FragColor = vec4(l, 1.0);
+	_GLF_color = vec4(l, 1.0);
 }

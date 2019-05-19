@@ -1,16 +1,15 @@
 #version 300 es 
 
+precision highp float; 
+
 layout(location = 0) out vec4 _GLF_color; 
 
-uniform vec2 injectionSwitch;
-// Colorful Voronoi
+uniform vec2 injectionSwitch;// Colorful Voronoi
 // By: Brandon Fogerty
 // bfogerty at gmail dot com
 // xdpixel.com
 
-#ifdef GL_ES
-precision mediump float;
-#endif
+
 
 uniform float time;
 uniform vec2 mouse;
@@ -55,5 +54,5 @@ void main( void )
     float r = voronoi( uv * 1.0 ) * 1.0;
     vec3 finalColor = vec3(10.0 * uv.y, 2.0, 1.0 * r ) * t;
     
-    gl_FragColor = vec4(finalColor, 1.0 );
+    _GLF_color = vec4(finalColor, 1.0 );
 }

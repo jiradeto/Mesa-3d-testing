@@ -1,10 +1,4 @@
-#version 300 es 
-
-precision highp float; 
-
-layout(location = 0) out vec4 _GLF_color; 
-
-uniform vec2 injectionSwitch;// https://www.shadertoy.com/view/XtVXWc
+// https://www.shadertoy.com/view/XtVXWc
 // thank you IQ + sun maker :)
 
 
@@ -28,7 +22,7 @@ void main( void )
     // sun
     float r = 0.175;
     vec2 sp = vec2(p.x, p.y * (resolution.y / resolution.x)) - vec2(0.95 + 0.004 * sin(p.y * 80.0 + t * 4.0), 0.02);
-    col += 1.0 * (0.8 - smoothstep(r, r + 0.05, length(sp)*1.5));
+    col += 1.0 * (0.8 - smoothstep(r, r + 0., length(sp)*1.5));
     
     // canopy
     r = 0.2 + 0.1 * cos(3.3 + atan(q.y,q.x) * 9.0 + 20.0*q.x)-  0.02 + 0.004 * sin(q.x * 80.0 + t * 4.0); // a bit animated
@@ -40,5 +34,5 @@ void main( void )
     r += exp(-30.0 * p.y);
     col *= 1.0 - (1.0 - smoothstep(r, r + 0.01, abs(q.x - 0.2 * sin(2.0 * q.y)))) * (1.0 - smoothstep(0.01, 0.01, q.y));
     
-    _GLF_color = vec4(col, 1.0);	
+    gl_FragColor = vec4(col, 1.0);	
 }

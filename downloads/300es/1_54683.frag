@@ -1,13 +1,13 @@
 #version 300 es 
 
+precision highp float; 
+
 layout(location = 0) out vec4 _GLF_color; 
 
 uniform vec2 injectionSwitch;
-#ifdef GL_ES
-precision mediump loat;
-#endif
 
-#extension GL_OES_standard_derivatives : enable
+
+
 
 uniform float time;
 uniform vec2 resolution;
@@ -26,5 +26,5 @@ void main( void ) {
 	col*=smoothstep(0.49, 0.485, abs(fy-0.5)+c);
 	float fx=fract(p.x*8.0);
 	col*=smoothstep(0.49, 0.485, abs(fx-0.5)+c);
-	gl_FragColor=vec4(col.rgb, 1.0);
+	_GLF_color=vec4(col.rgb, 1.0);
 }

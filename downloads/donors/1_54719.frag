@@ -2,9 +2,7 @@
  * Original shader from: https://www.shadertoy.com/view/MltcDB
  */
 
-#ifdef GL_ES
-precision mediump float;
-#endif
+
 
 // glslsandbox uniforms
 uniform float time;
