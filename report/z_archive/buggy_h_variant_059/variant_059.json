@@ -1,0 +1,55 @@
+{
+  "injectionSwitch": {
+    "func": "glUniform2f",
+    "args": [
+      0.0,
+      1.0
+    ]
+  },
+  "mouse": {
+    "func": "glUniform2f",
+    "args": [
+      0.0,
+      0.0
+    ]
+  },
+  "time": {
+    "func": "glUniform1f",
+    "args": [
+      0.0
+    ]
+  },
+  "resolution": {
+    "func": "glUniform2f",
+    "args": [
+      256.0,
+      256.0
+    ]
+  },
+  "GLF_live4time": {
+    "func": "glUniform1f",
+    "args": [
+      0.056928456
+    ]
+  },
+  "GLF_live4mouse": {
+    "func": "glUniform2f",
+    "args": [
+      0.5456143,
+      0.2519992
+    ]
+  },
+  "GLF_live4resolution": {
+    "func": "glUniform2f",
+    "args": [
+      0.49853408,
+      0.64377654
+    ]
+  },
+  "GLF_live5time": {
+    "func": "glUniform1f",
+    "args": [
+      0.26022816
+    ]
+  }
+}
