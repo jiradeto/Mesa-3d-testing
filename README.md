@@ -34,7 +34,7 @@ ninja -C $desired_path/ install
 ```
 
 ### Usage
-When running opgnGl application, set env variables pointing to the directory to which mesa installed
+When running opgnGL application, set env variables pointing to the directory to which mesa is installed
 ```bash
 LD_LIBRARY_PATH=$desired_path LIBGL_DRIVERS_PATH=$desired_path java -jar -ea gles-desktop-worker.jar
 ```
